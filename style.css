@@ -1,0 +1,754 @@
+:root {
+
+  /* DEINE FARBPALETTE */
+
+  --pink-light: #fdeaf2;
+  --pink: #f6cddd;
+  --pink-strong: #eaa9c2;
+
+  --teal-light: #d9f1f0;
+  --teal: #63bfc0;
+  --teal-dark: #347d82;
+
+  --navy: #17304a;
+
+  --text: #17304a;
+  --muted: #718293;
+
+  --white:
+    rgba(255, 255, 255, 0.88);
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+
+body {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  padding:
+    max(22px, env(safe-area-inset-top))
+    18px
+    max(30px, env(safe-area-inset-bottom));
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: var(--text);
+
+  background:
+
+    linear-gradient(
+      155deg,
+      #fce8f1 0%,
+      #f9edf4 36%,
+      #e1f3f2 72%,
+      #cbe9e8 100%
+    );
+
+  position: relative;
+
+  overflow-x: hidden;
+
+}
+
+
+/* DEKORATIVE HINTERGRUND-FLÄCHEN */
+
+.bubble {
+
+  position: fixed;
+
+  border-radius: 50%;
+
+  filter: blur(3px);
+
+  opacity: 0.65;
+
+  pointer-events: none;
+
+}
+
+
+.bubble-one {
+
+  width: 230px;
+  height: 230px;
+
+  background: var(--pink);
+
+  top: -80px;
+  right: -70px;
+
+}
+
+
+.bubble-two {
+
+  width: 220px;
+  height: 220px;
+
+  background: var(--teal-light);
+
+  bottom: 60px;
+  left: -100px;
+
+}
+
+
+.bubble-three {
+
+  width: 90px;
+  height: 90px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.8
+  );
+
+  top: 42%;
+  right: -25px;
+
+}
+
+
+/* APP CONTAINER */
+
+.app {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 430px;
+
+  padding:
+    24px
+    22px
+    26px;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.8
+    );
+
+  border-radius: 34px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.74
+    );
+
+  backdrop-filter:
+    blur(24px);
+
+  -webkit-backdrop-filter:
+    blur(24px);
+
+  box-shadow:
+
+    0 30px 70px
+    rgba(
+      69,
+      102,
+      118,
+      0.18
+    ),
+
+    inset
+    0 1px 0
+    rgba(
+      255,
+      255,
+      255,
+      0.95
+    );
+
+}
+
+
+/* OBEN */
+
+.topbar {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+}
+
+
+.bayern-pill {
+
+  padding:
+    8px
+    15px;
+
+  border-radius:
+    999px;
+
+  background:
+    var(--teal-light);
+
+  color:
+    var(--teal-dark);
+
+  font-size:
+    12px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    2.5px;
+
+}
+
+
+.season-emoji {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.75
+    );
+
+  box-shadow:
+    0 7px 20px
+    rgba(
+      79,
+      105,
+      120,
+      0.08
+    );
+
+  font-size:
+    25px;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+  margin-top: 27px;
+
+  text-align: center;
+
+}
+
+
+.eyebrow {
+
+  margin: 0 0 5px;
+
+  color:
+    var(--teal-dark);
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    2.2px;
+
+}
+
+
+h1 {
+
+  margin:
+    0
+    0
+    28px;
+
+  font-size:
+    31px;
+
+  line-height:
+    1.1;
+
+}
+
+
+.countdown-intro {
+
+  margin: 0;
+
+  color:
+    var(--muted);
+
+  font-size:
+    18px;
+
+}
+
+
+.days {
+
+  margin:
+    -3px 0
+    -7px;
+
+  font-size:
+    112px;
+
+  font-weight:
+    850;
+
+  line-height:
+    1;
+
+  letter-spacing:
+    -7px;
+
+  color:
+    var(--navy);
+
+  text-shadow:
+    0 8px 30px
+    rgba(
+      23,
+      48,
+      74,
+      0.08
+    );
+
+}
+
+
+.day-word {
+
+  margin:
+    0 0
+    13px;
+
+  font-size:
+    24px;
+
+  font-weight:
+    700;
+
+}
+
+
+.until {
+
+  margin:
+    0 0
+    9px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    15px;
+
+}
+
+
+h2 {
+
+  margin: 0;
+
+  font-size:
+    25px;
+
+}
+
+
+/* FERIENZEIT */
+
+.date-card {
+
+  display: flex;
+
+  gap: 13px;
+
+  align-items: center;
+
+  margin-top: 27px;
+
+  padding:
+    17px
+    17px;
+
+  border-radius:
+    23px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      var(--pink-light),
+      rgba(
+        255,
+        255,
+        255,
+        0.75
+      )
+    );
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.9
+    );
+
+}
+
+
+.date-icon {
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 15px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.82
+    );
+
+  font-size: 21px;
+
+}
+
+
+.date-label {
+
+  margin-bottom: 3px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.5px;
+
+}
+
+
+.date-main {
+
+  font-size:
+    16px;
+
+  font-weight:
+    750;
+
+}
+
+
+.official-date {
+
+  margin-top:
+    4px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    11px;
+
+  line-height:
+    1.35;
+
+}
+
+
+/* PROGRESS */
+
+.progress-card {
+
+  margin-top:
+    17px;
+
+  padding:
+    18px;
+
+  border-radius:
+    23px;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.71
+    );
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      46,
+      87,
+      102,
+      0.07
+    );
+
+}
+
+
+.progress-header {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin-bottom:
+    11px;
+
+  font-size:
+    13px;
+
+  color:
+    var(--muted);
+
+}
+
+
+.progress-header strong {
+
+  color:
+    var(--teal-dark);
+
+}
+
+
+.progress-track {
+
+  width: 100%;
+
+  height: 11px;
+
+  overflow: hidden;
+
+  border-radius:
+    999px;
+
+  background:
+    #edf1f2;
+
+}
+
+
+.progress-bar {
+
+  width: 0%;
+
+  height: 100%;
+
+  border-radius:
+    999px;
+
+  background:
+
+    linear-gradient(
+      90deg,
+      var(--pink-strong),
+      var(--teal)
+    );
+
+  box-shadow:
+    0 2px 8px
+    rgba(
+      99,
+      191,
+      192,
+      0.3
+    );
+
+  transition:
+    width
+    0.7s ease;
+
+}
+
+
+.progress-footer {
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin-top:
+    8px;
+
+  color:
+    #9aa7ae;
+
+  font-size:
+    10px;
+
+}
+
+
+/* DANACH */
+
+.next-card {
+
+  display: flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  margin-top:
+    17px;
+
+  padding:
+    17px
+    18px;
+
+  border-radius:
+    23px;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      var(--teal-light),
+      rgba(
+        255,
+        255,
+        255,
+        0.72
+      )
+    );
+
+}
+
+
+.next-label {
+
+  margin-bottom:
+    4px;
+
+  color:
+    var(--teal-dark);
+
+  font-size:
+    10px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    1.5px;
+
+}
+
+
+.next-holiday {
+
+  font-size:
+    16px;
+
+  font-weight:
+    750;
+
+}
+
+
+.next-date {
+
+  margin-top:
+    3px;
+
+  color:
+    var(--muted);
+
+  font-size:
+    12px;
+
+}
+
+
+.arrow {
+
+  color:
+    var(--teal);
+
+  font-size:
+    35px;
+
+  font-weight:
+    300;
+
+}
+.holiday-line {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
