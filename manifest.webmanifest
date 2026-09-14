@@ -1,0 +1,11 @@
+{
+  "name": "Ferien Countdown Bayern",
+  "short_name": "Ferien",
+  "description": "Countdown bis zu den nächsten bayerischen Schulferien",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FDEAF2",
+  "theme_color": "#81D8D0",
+  "lang": "de-DE"
+}
