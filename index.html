@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Ferien Countdown Bayern</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+
+<body>
+
+  <!-- Dekoration im Hintergrund -->
+
+  <div class="bubble bubble-one"></div>
+  <div class="bubble bubble-two"></div>
+  <div class="bubble bubble-three"></div>
+
+
+  <!-- App -->
+
+  <main class="app">
+
+
+    <!-- Oben -->
+
+    <header class="topbar">
+
+      <div class="bayern-pill">
+        BAYERN
+      </div>
+
+    </header>
+
+
+    <!-- Haupt-Countdown -->
+
+    <section class="hero">
+
+      <p class="eyebrow">
+        NÄCHSTE AUSZEIT
+      </p>
+
+      <h1>
+        Ferien Countdown
+      </h1>
+
+
+      <p
+        id="countdownIntro"
+        class="countdown-intro"
+      >
+        Noch
+      </p>
+
+
+      <div
+        id="days"
+        class="days"
+      >
+        --
+      </div>
+
+
+      <p
+        id="dayWord"
+        class="day-word"
+      >
+        Tage
+      </p>
+
+
+      <p class="until">
+        bis zum letzten Schultag
+      </p>
+
+
+      <h2
+        id="holiday"
+        class="holiday-line"
+      >
+        Herbstferien 🍂
+      </h2>
+
+
+      <!--
+        Dieses Element bleibt unsichtbar.
+        Es verhindert einen Fehler, falls in Deiner
+        aktuellen script.js noch seasonEmoji verwendet wird.
+      -->
+
+      <span
+        id="seasonEmoji"
+        style="display: none;"
+      ></span>
+
+    </section>
+
+
+
+    <!-- Ferienzeit -->
+
+    <section class="date-card">
+
+      <div class="date-icon">
+        ✨
+      </div>
+
+
+      <div>
+
+        <div class="date-label">
+          DEINE FREIE ZEIT
+        </div>
+
+
+        <div
+          id="date"
+          class="date-main"
+        >
+          --
+        </div>
+
+
+        <div
+          id="officialDate"
+          class="official-date"
+        >
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Fortschritt -->
+
+    <section class="progress-card">
+
+      <div class="progress-header">
+
+        <span>
+          Schulzeit geschafft
+        </span>
+
+
+        <strong id="progressLabel">
+          0 %
+        </strong>
+
+      </div>
+
+
+      <div class="progress-track">
+
+        <div
+          id="progressBar"
+          class="progress-bar"
+        ></div>
+
+      </div>
+
+
+      <div class="progress-footer">
+
+        <span id="schoolStartLabel">
+          Schulstart
+        </span>
+
+        <span>
+          Ferien
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Ferien danach -->
+
+    <section class="next-card">
+
+      <div>
+
+        <div class="next-label">
+          DANACH
+        </div>
+
+
+        <div
+          id="nextHoliday"
+          class="next-holiday"
+        >
+          —
+        </div>
+
+
+        <div
+          id="nextDate"
+          class="next-date"
+        >
+          —
+        </div>
+
+      </div>
+
+
+      <div class="arrow">
+        ›
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
