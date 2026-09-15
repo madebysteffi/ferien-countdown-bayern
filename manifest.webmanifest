@@ -7,5 +7,12 @@
   "display": "standalone",
   "background_color": "#FDEAF2",
   "theme_color": "#81D8D0",
-  "lang": "de-DE"
+  "lang": "de-DE",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png"
+    }
+  ]
 }
