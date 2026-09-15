@@ -10,7 +10,15 @@
   >
 
   <title>Ferien Countdown Bayern</title>
+<meta name="theme-color" content="#81D8D0">
 
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="apple-mobile-web-app-title" content="Ferien">
+
+<link rel="manifest" href="manifest.webmanifest">
   <link
     rel="stylesheet"
     href="style.css"
@@ -228,7 +236,13 @@
 
 
   <script src="script.js"></script>
-
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./service-worker.js");
+    });
+  }
+</script>
 </body>
 
 </html>
