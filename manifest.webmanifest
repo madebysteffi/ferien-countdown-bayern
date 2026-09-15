@@ -10,7 +10,7 @@
   "lang": "de-DE",
   "icons": [
     {
-      "src": "./icon.png",
+      "src": "./app-icon.png",
       "sizes": "1254x1254",
       "type": "image/png"
     }
