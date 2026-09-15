@@ -258,24 +258,55 @@ else if (nextHoliday) {
     );
 
 
-  const daysRemaining =
-    Math.max(
-      0,
-      (
-        lastSchoolDayUTC -
-        todayUTC
-      ) / DAY
-    );
+ const daysRemaining =
+  Math.max(
+    0,
+    (
+      lastSchoolDayUTC -
+      todayUTC
+    ) / DAY
+  );
 
+
+if (daysRemaining === 0) {
+
+  introElement.textContent =
+    "";
+
+  daysElement.textContent =
+    "Heute";
+
+  daysElement.style.fontSize =
+    "64px";
+
+  daysElement.style.letterSpacing =
+    "-2px";
+
+  dayWordElement.textContent =
+    "ist der letzte Schultag! 🎉";
+
+}
+
+else {
+
+  introElement.textContent =
+    "Noch";
 
   daysElement.textContent =
     daysRemaining;
 
+  daysElement.style.fontSize =
+    "";
+
+  daysElement.style.letterSpacing =
+    "";
 
   dayWordElement.textContent =
     daysRemaining === 1
       ? "Tag"
       : "Tage";
+
+}
 
 
   holidayElement.textContent =
