@@ -80,6 +80,22 @@ function utcValue(dateString) {
 }
 
 
+// Heute ausgeschlossen, letzter Schultag eingeschlossen.
+// Schultage werden hier gemäß Anzeige als Montag bis Freitag gezählt.
+function remainingSchoolDays(today, lastSchoolDay) {
+  let count = 0;
+
+  for (let day = today + DAY; day <= lastSchoolDay; day += DAY) {
+    const weekday = new Date(day).getUTCDay();
+    if (weekday >= 1 && weekday <= 5) {
+      count += 1;
+    }
+  }
+
+  return count;
+}
+
+
 function dateObject(dateString) {
   const [year, month, day] =
     dateString.split("-").map(Number);
@@ -142,6 +158,9 @@ const todayUTC =
 
 const daysElement =
   document.getElementById("days");
+
+const detailsElement =
+  document.getElementById("countdownDetails");
 
 const holidayElement =
   document.getElementById("holiday");
@@ -305,6 +324,16 @@ else {
     daysRemaining === 1
       ? "Tag"
       : "Tage";
+
+  const weeksRemaining = (daysRemaining / 7).toLocaleString("de-DE", {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1
+  });
+  const schoolDaysRemaining = remainingSchoolDays(todayUTC, lastSchoolDayUTC);
+
+  detailsElement.textContent =
+    `≈ ${weeksRemaining} Wochen · ${schoolDaysRemaining} ${schoolDaysRemaining === 1 ? "Schultag" : "Schultage"}`;
+  detailsElement.hidden = false;
 
 }
 

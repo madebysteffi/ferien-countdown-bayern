@@ -378,6 +378,14 @@ h1 {
 }
 
 
+.countdown-details {
+  margin: 0 0 13px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
 .until {
 
   margin:

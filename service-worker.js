@@ -1,11 +1,11 @@
-const CACHE_NAME = "ferien-countdown-v2";
+const CACHE_NAME = "ferien-countdown-v3";
 
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
   "./style.css",
   "./script.js",
-  "./manifest.webmanifest"
+  "./manifest.webmanifest",
   "./app-icon.png"
 ];
 
